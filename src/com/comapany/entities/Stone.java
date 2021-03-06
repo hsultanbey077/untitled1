@@ -15,6 +15,16 @@ public class Stone<T> {
     public void addStones(T stone){
         stones.add(stone);
     }
+    public void printNumbers(){
+        for(T stone : stones){
+
+            System.out.println(stone);
+        }
+    }
+    public void hello(T name){
+        System.out.println("hello "+ name);
+    }
+
 
 //    public void sortStones(){
 //        for(int i=0;i<stones.size();i++){
@@ -43,13 +53,6 @@ public class Stone<T> {
     }
 
 
-
-    public void printNumbers(){
-        for(T stone : stones){
-
-            System.out.println(stone);
-        }
-    }
 
     public String getName() {
         return name;

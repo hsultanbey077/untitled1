@@ -5,6 +5,7 @@ import com.comapany.DATA.interfaces.IDB;
 //import com.comapany.repositories.interfaces.Methods;
 import com.comapany.controller.NecklaceController;
 import com.comapany.controller.StoneController;
+import com.comapany.entities.Stone;
 import com.comapany.repositories.interfaces.IStone;
 import com.comapany.repositories.interfaces.Methods;
 import com.comapany.repositories.NecklaceRepo;
@@ -28,10 +29,11 @@ public class main {
 
 //        Necklace[] necklaces=new Necklace[5];
 
-//        Stone<Integer> stones=new Stone<>();
-//        stones.addStones(5);
-//
-//        stones.printNumbers();
+        Stone<Integer> stones=new Stone<>();
+        stones.addStones(5);
+        stones.printNumbers();
+        Stone<String> stone1=new Stone<>();
+        stone1.hello("almaz");
 
 
 //        Methods method =(int x)->x*5;
