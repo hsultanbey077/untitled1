@@ -2,11 +2,10 @@ package com.comapany.repositories;
 
 import com.comapany.DATA.interfaces.IDB;
 import com.comapany.entities.Necklace;
-import com.comapany.interfaces.Methods;
+import com.comapany.repositories.interfaces.Methods;
 
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

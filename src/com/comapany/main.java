@@ -2,11 +2,11 @@ package com.comapany;
 
 import com.comapany.DATA.Postgre;
 import com.comapany.DATA.interfaces.IDB;
-//import com.comapany.interfaces.Methods;
+//import com.comapany.repositories.interfaces.Methods;
 import com.comapany.controller.NecklaceController;
 import com.comapany.controller.StoneController;
-import com.comapany.interfaces.IStone;
-import com.comapany.interfaces.Methods;
+import com.comapany.repositories.interfaces.IStone;
+import com.comapany.repositories.interfaces.Methods;
 import com.comapany.repositories.NecklaceRepo;
 import com.comapany.repositories.StoneRepo;
 

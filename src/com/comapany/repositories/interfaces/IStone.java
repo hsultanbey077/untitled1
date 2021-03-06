@@ -1,4 +1,4 @@
-package com.comapany.interfaces;
+package com.comapany.repositories.interfaces;
 
 import com.comapany.entities.Stone;
 

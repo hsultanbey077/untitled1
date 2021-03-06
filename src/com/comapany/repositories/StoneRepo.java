@@ -2,7 +2,7 @@ package com.comapany.repositories;
 
 import com.comapany.DATA.interfaces.IDB;
 import com.comapany.entities.Stone;
-import com.comapany.interfaces.IStone;
+import com.comapany.repositories.interfaces.IStone;
 
 import java.sql.*;
 import java.util.LinkedList;

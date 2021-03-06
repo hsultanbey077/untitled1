@@ -1,7 +1,7 @@
 package com.comapany.controller;
 
 import com.comapany.entities.Stone;
-import com.comapany.interfaces.IStone;
+import com.comapany.repositories.interfaces.IStone;
 
 import java.util.List;
 

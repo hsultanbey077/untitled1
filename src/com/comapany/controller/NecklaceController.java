@@ -1,8 +1,7 @@
 package com.comapany.controller;
 
 import com.comapany.entities.Necklace;
-import com.comapany.entities.Stone;
-import com.comapany.interfaces.Methods;
+import com.comapany.repositories.interfaces.Methods;
 
 import java.util.List;
 
