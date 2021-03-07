@@ -35,7 +35,7 @@ public class MyApplication {
                 System.out.print("Enter option (1-8): ");
                 int option = scanner.nextInt();
                 if (option == 1) {
-                    calculateCost();
+                    giveResults();
                 } else if (option==2){
                     calculateWeight();
                 }else if (option==3){
@@ -61,13 +61,13 @@ public class MyApplication {
             }
         }
     }
-    public void calculateCost() {
-        System.out.println("Please enter id stone ");
-        int id = scanner.nextInt();
-        System.out.println("Please enter id necklace");
-        int id1 = scanner.nextInt();
+    public void giveResults() {
+        System.out.println("Please enter your patient_id");
+        int pat_id = scanner.nextInt();
+        System.out.println("Please enter your test_id");
+        int test_id = scanner.nextInt();
 
-        int response = controller.CalculateCost(id,id1);
+        int response = controller.CalculateCost(pat_id,test_id);
         System.out.println(response);
     }
     public void calculateWeight(){
