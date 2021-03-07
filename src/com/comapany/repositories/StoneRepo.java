@@ -19,7 +19,7 @@ public class StoneRepo implements IStone {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "INSERT INTO stone(id,,name,cost,weight) VALUES (?,?,?,?)";//query for creating user
+            String sql = "INSERT INTO stone(stone_id,,name,cost,weight) VALUES (?,?,?,?)";//query for creating user
             PreparedStatement st = con.prepareStatement(sql);
             st.setInt(1,stone.getId());
             st.setString(2, stone.getName());
@@ -48,7 +48,7 @@ public class StoneRepo implements IStone {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT stone_id,name,cost,weight FROM stone WHERE id=?";//query for this method
+            String sql = "SELECT stone_id,name,cost,weight FROM stone WHERE stone_id=?";//query for this method
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, id);

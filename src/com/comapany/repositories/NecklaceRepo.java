@@ -16,6 +16,11 @@ public class NecklaceRepo implements Methods {
     public NecklaceRepo(IDB db) {
         this.db = db;
     }
+    /*
+    In the first two methods (CalculateCost,CalculateWeight) I calculate the full weight and the full price.
+    the total price of the necklace is A the price of one stone is B and the one stone itself is C,
+     and in the end we get the formula A+B*C, and we do the same with CalculateWeight
+    */
 
     @Override
     public int CalculateCost(int id , int id1) {
@@ -86,8 +91,9 @@ public class NecklaceRepo implements Methods {
                 response1=rs1.getInt("weight");
                 response2=rs1.getInt("stones");
             }
-            Method main = ((x1, y1) -> (x1+y1)*5);
-            Method multiply = (((x, y) -> x*y));
+            /* It is a lambda expressions for calculating*/
+            Method1 main = ((x1, y1) -> (x1+y1)*5);
+            Method1 multiply = (((x, y) -> x*y));
 
             int a=0;
             int b=0;
@@ -107,7 +113,7 @@ public class NecklaceRepo implements Methods {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "INSERT INTO necklace(necklace_id,,weight,name,cost1,stones) VALUES (?,?,?,?,?)";//query for creating user
+            String sql = "INSERT INTO necklace(necklace_id,weight,name,cost1,stones) VALUES (?,?,?,?,?)";//query for creating user
             PreparedStatement st = con.prepareStatement(sql);
             st.setInt(1,necklace.getNecklace_id());
             st.setString(2, necklace.getName());
@@ -133,7 +139,7 @@ public class NecklaceRepo implements Methods {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT necklace_id,,weight,name,cost1,stones FROM necklace WHERE necklace_id=?";//query for this method
+            String sql = "SELECT necklace_id,weight,name,cost1,stones FROM necklace WHERE necklace_id=?";//query for this method
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, id);
@@ -166,7 +172,7 @@ public class NecklaceRepo implements Methods {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT necklace_id,,weight,name,cost1,stones FROM necklace";//query for this method
+            String sql = "SELECT necklace_id,weight,name,cost1,stones FROM necklace";//query for this method
             Statement st = con.createStatement();
 
             ResultSet rs = st.executeQuery(sql);
@@ -199,5 +205,8 @@ public class NecklaceRepo implements Methods {
     }
 
  interface Method{
+    int CalculateCost(int x, int y);
+}
+interface Method1{
     int CalculateCost(int x, int y);
 }

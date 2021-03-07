@@ -49,7 +49,7 @@ public class MyApplication {
                 }else if(option==7){
                     getNecklacesByIdMenu();
                 } else if(option==8){
-                    getAllStoneMenu();
+                    getStoneByIdMenu();
                 }else {
                     break;
                 }

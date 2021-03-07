@@ -6,12 +6,6 @@ public class Necklace {
     private String name;
     private int stones;
     private int cost1;
-    public Necklace(int weight, String name,int Stones,int cost){
-        setName(name);
-        setWeight(weight);
-        setStones(stones);
-        setCost1(cost);
-    }
 
 
     public Necklace() {
@@ -71,7 +65,7 @@ public class Necklace {
     public String toString() {
         return "Necklace{" +
                 "weight=" + weight +
-                ", name='" + name + '\'' +
+                ", name=" + name  +
                 ", stones=" + stones +
                 ", cost=" + cost1 +
                 '}';

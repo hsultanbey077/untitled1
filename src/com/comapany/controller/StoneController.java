@@ -11,8 +11,8 @@ public class StoneController {
     public StoneController(IStone repo) {
         this.repo = repo;
     }
-    public String createStone(int id,String name,int cost,int weight){
-        Stone stone =new Stone(id,name,cost,weight);
+    public String createStone(int stone_id,String name,int cost,int weight){
+        Stone stone =new Stone(stone_id,name,cost,weight);
         boolean created= repo.createStone(stone);
         return (created ? "Stone was created!" : "Stone creation was failed!");
     }
